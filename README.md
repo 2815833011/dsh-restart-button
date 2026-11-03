@@ -65,7 +65,10 @@ restart-helper.mjs（detached，cwd=%TEMP%）
 
 ```bash
 cd ~/.dsh/profiles/desktop
-pnpm add link:~/Documents/dsh-workspace/link-plugins/dsh-restart-button
+pnpm add link:/absolute/path/to/dsh-workspace/link-plugins/dsh-restart-button
+
+   # Windows 上 `~` 不会展开，直接给绝对路径，例如：
+   #   pnpm add link:C:/Users/you/Documents/dsh-workspace/link-plugins/dsh-restart-button
 ```
 
 profile 的 `dsh.profile.bundles` 里加 `dsh-restart-button`。客户端的
