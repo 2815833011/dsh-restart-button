@@ -1,34 +1,37 @@
 {
-  "name": "dsh-restart-button",
-  "version": "0.3.0",
-  "description": "Restart button in the DSH desktop titlebar: one click stops the whole desktop application and starts it again.",
-  "type": "module",
-  "license": "MIT",
-  "keywords": [
-    "dsh",
-    "dsh-plugin",
-    "restart",
-    "titlebar",
-    "windows"
-  ],
-  "exports": {
-    ".": "./index.js",
-    "./client": "./client.js",
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "index.js",
-    "client.js",
-    "restart-helper.mjs",
-    "cordis.patch.yml"
-  ],
-  "dsh": {
-    "bundle": {
-      "patch": "./cordis.patch.yml"
+    "name": "dsh-restart-button",
+    "version": "0.3.1",
+    "description": "Restart button in the DSH desktop titlebar: one click stops the whole desktop application and starts it again.",
+    "type": "module",
+    "license": "MIT",
+    "keywords": [
+        "dsh",
+        "dsh-plugin",
+        "restart",
+        "titlebar",
+        "windows"
+    ],
+    "exports": {
+        ".": "./index.js",
+        "./client": "./client.js",
+        "./package.json": "./package.json"
     },
-    "client": {
-      "platform": "web",
-      "immediately": true
+    "files": [
+        "index.js",
+        "client.js",
+        "restart-helper.mjs",
+        "cordis.patch.yml"
+    ],
+    "dsh": {
+        "bundle": {
+            "patch": "./cordis.patch.yml"
+        },
+        "client": {
+            "platform": "web",
+            "immediately": true
+        }
+    },
+    "scripts": {
+        "test": "node test-env.mjs && node test-helper.mjs"
     }
-  }
 }

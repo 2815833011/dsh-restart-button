@@ -124,3 +124,7 @@ profile 的 `dsh.profile.bundles` 里加 `dsh-restart-button`。客户端的
 ## License
 
 MIT
+
+## 兼容性 / Compatibility
+
+- dsh **0.2.2-rc.5**：新增 `scripts.test` = `node test-env.mjs && node test-helper.mjs`，两条自检在 rc.5 宿主上通过（helper 会真的停掉两个替身进程再干净退出）。
